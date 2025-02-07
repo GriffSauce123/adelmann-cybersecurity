@@ -11,7 +11,8 @@
 }
 
 body {
-  background: #00001f
+  background: #00001f;
+  overflow-x: hidden; 
 }
 
 .down-caret {
@@ -26,12 +27,12 @@ body {
 }
 
 .container {
-  min-height: max(875px, 100vh);
+  min-height: 100vh;
+  height: fit-content;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   overflow: hidden;
 }
 
@@ -65,6 +66,7 @@ body {
 }
 
 .blob {
+  padding: 100px;
   position: absolute;
   width: 700px;
   height: 500px;
@@ -86,7 +88,7 @@ body {
     font-weight: 650;
 }
 
-.cta-button:hover {
+.cta-button:hover, .small_cta:hover {
     opacity: 0.5;
 }
 
@@ -104,17 +106,19 @@ body {
 .selling_points {
   list-style-type: none;
   font-size: 20px;
-  padding-left: 10px;
   margin-bottom: 20px;
 }
 
 .selling_points li {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.cta_container {
+  padding-top: 20px;
 }
 
 .small_cta {
   font-size: 20px;
-  line-height: 40px;
   text-decoration: none;
   font-weight: bold;
   margin-right: 50px;
@@ -146,6 +150,14 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
+  li, .small_cta {
+    font-size: 16px;
+  }
+
+  .small_cta {
+    margin-right: 40px;
+  }
+
   .blob {
     max-height: 30vh;
   }
@@ -164,6 +176,7 @@ body {
 
   .offerings h3 {
     line-height: 80px;
+    font-weight: bold;
 
   }
 
