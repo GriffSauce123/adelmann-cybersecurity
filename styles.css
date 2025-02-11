@@ -36,6 +36,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 .hero, .offerings, .cta {
@@ -90,6 +91,7 @@ h4 {
 
 .right-side {
     right: 10px;
+    top: calc(50% - 250px);
 }
 
 .cta-button {
@@ -118,6 +120,16 @@ p {
   line-height: 40px;
   padding-bottom: 40px;
   max-width: 850px;
+}
+
+
+li {
+  font-size: 20px;
+  line-height: 40px;
+  max-width: 850px;
+  list-style-type:disc;
+  margin-left: 30px;
+  overflow-x: visible;
 }
 
 .small_cta {
