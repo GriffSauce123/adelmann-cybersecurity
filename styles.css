@@ -16,18 +16,6 @@ body {
   overflow-x: hidden; 
 }
 
-.down-caret {
-    width: 48px;
-    height: 48px;
-    position: fixed;
-    bottom: 0;
-    left: calc(50% - 24px);
-    opacity: 0.4;
-    z-index: 11;
-    cursor: pointer;
-    overflow: hidden;
-}
-
 .container {
   min-height: 100vh;
   height: fit-content;
@@ -39,8 +27,21 @@ body {
   position: relative;
 }
 
-.hero, .offerings, .cta {
+.hero, .offerings, .cta, .contact-section {
   z-index: 10;
+}
+
+.contact-section h2 {
+  text-decoration: underline;
+}
+
+.contact-section h2:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
 }
 
 .offerings {
@@ -165,6 +166,11 @@ li {
 }
 
 @media only screen and (max-width: 1200px) {
+  .contact-section h2 {
+    font-size: 90%;
+    line-height: 28px;
+  }
+
   li, .small_cta {
     font-size: 16px;
   }

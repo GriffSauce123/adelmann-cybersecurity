@@ -1,10 +1,14 @@
-const caret = document.getElementById("down-caret");
+const copyEmail = document.getElementById("copyEmail");
+const copyPhone = document.getElementById("copyPhone");
 
-caret.addEventListener("click", () => {
-    window.scroll({
-        top: 25000, 
-        left: 0, 
-        behavior: 'smooth' 
-      });
-    console.log("penis")
-})
+
+function copyContact(text) {
+  
+  navigator.clipboard.writeText(text);
+
+  //turn copy button into checkmark
+  alert(`Copied: ${text}`)
+} 
+
+copyEmail.addEventListener("click", () => {copyContact("contact@griffinadelmann.com")});
+copyPhone.addEventListener("click", () => {copyContact(copyPhone.innerHTML)});
