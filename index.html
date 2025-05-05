@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
     <link rel="icon" type="image/png" href="./favicon.jpg?" />
     <title>Adelmann Cybersecurity</title>
 </head>
@@ -27,7 +28,7 @@
         </div>
     </div>
 
-    <div class="container" id="threats" style="margin-bottom: 100px;">
+    <div class="container" id="threats">
         <div class="inner">
             <h2 style="padding-left: 20px;">Digital Exposure is Your Greatest Liability</h2>
             <p style="padding: 20px; font-size: 16px;">Your personal and professional details exist online. Data
@@ -41,7 +42,7 @@
         </div>
     </div>
 
-    <div class="container" id="our-service" style="margin-bottom: 100px;">
+    <div class="container" id="our-service" style="margin-top: 100px;">
         <div class="inner">
             <h2 style="padding-left: 20px;">Bespoke Digital Protection</h2>
             <p style="padding: 20px; font-size: 16px;">Adelmann Cybersecurity conducts exhaustive Open Source
@@ -55,7 +56,7 @@
         </div>
     </div>
 
-    <div class="container" id="about-us" style="margin-bottom: 100px;">
+    <div class="container" id="about-us" style="margin-top: 100px;">
         <div class="inner">
             <h2 style="padding-left: 20px;">Your Partner in Data Sovereignty</h2>
             <p style="padding: 20px; font-size: 16px;">Adelmann Cybersecurity specializes in digital footprint reduction
@@ -67,28 +68,50 @@
         </div>
     </div>
 
-    <div class="container" id="contact" style="margin-bottom: 100px;">
-        <div class="flex contact">
-            <svg style="" width="102" height="75" viewBox="0 0 204 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_544_2)">
-                    <path d="M87.4534 0L174.056 150H203.706L117.103 0H87.4534Z" fill="white" />
-                    <path d="M116.252 0L29.6492 150H0L86.6023 0H116.252Z" fill="white" />
-                    <path d="M101.852 54.9375L87.0269 80.6148L127.08 149.988H156.729L101.852 54.9375Z" fill="white" />
-                </g>
-                <defs>
-                    <clipPath id="clip0_544_2">
-                        <rect width="203.706" height="150" fill="white" />
-                    </clipPath>
-                </defs>
-            </svg>
-            <div style="margin: auto;">
-                <p id="copyEmail">contact[at]griffinadelmann.com</p>
-                <p id="copyPhone">(646) 883-5096</p>
+    <div class="container" style="padding: 20px; margin-top: 100px; margin-bottom: 100px;" id="contact"> <!-- Assume this container provides centering/padding -->
+        <form action="https://send.pageclip.co/KnwGzQwGBnTpx9BbJ77yQxOVAlcsme42" class="pageclip-form contact-form-styled" method="post">
+            <h2 style="text-align: center; padding-bottom: 20px; font-weight: normal; text-transform: uppercase;">Contact Us</h2>
+            <div class="form-group">
+                <label for="name">Full Name <span class="required-asterisk">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required />
             </div>
-        </div>
-    </div>
+    
+            <div class="form-group">
+                <label for="occupation">Occupation <span class="required-asterisk">*</span></label>
+                <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" required />
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email Address <span class="required-asterisk">*</span></label>
+                <input type="email" id="email" name="email" placeholder="youremail@website.com" required />
+            </div>
+    
+            <div class="form-group">
+                <label for="phone">Phone Number <span class="required-asterisk">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 646-924-8365" required />
+            </div>
+    
+            <div class="form-group">
+                <label for="request">Let us know how we can help you</label>
+                <input type="text" id="request" name="request" placeholder="..." />
+            </div>
 
-    <script src="./app.js"></script>
+            <div class="form-group">
+                <label for="source">How did you hear about us</label>
+                <input type="text" id="source" name="source" placeholder="Referral, Online Search" />
+            </div>
+    
+            <div class="form-group">
+                <button type="submit" class="pageclip-form__submit contact-form__submit-styled">
+                    <span>Submit</span>
+                </button>
+            </div>
+            <p style="font-size: 16px; text-align: center; opacity: 0.7;">+1 (646) 883-5096</p>
+
+
+        </form>
+    </div>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
 
 </html>
