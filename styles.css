@@ -23,10 +23,10 @@ body {
 }
 
 
-/* -------------------- FOR THE ANIMATED BLOB ART BG --------------------------  */
+/* -------------------- FOR THE BG --------------------------  */
 
 .blob {
-  position: fixed;
+  position: absolute;
   width: 700px;
   height: 500px;
   top: calc(50%);
@@ -34,39 +34,17 @@ body {
   background: #31136D39;
   filter: blur(250px);
   -webkit-filter: blur(250px);
-  animation: morph 60s infinite alternate;
-  -webkit-animation: morph 60s infinite alternate;
-  transition: border-radius 15s cubic-bezier(0.07, 0.8, 0.16, 1);
   z-index: 1;
   transform: translate(-50%, -50%);
 }
 
-@-webkit-keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
-  }
-
-  50% {
-    border-radius: 30% 70% 50% 50% / 60% 40% 60% 40%;
-  }
-
-  100% {
-    border-radius: 40% 60% 70% 30% / 70% 50% 50% 60%;
-  }
-}
-
-@keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
-  }
-
-  50% {
-    border-radius: 30% 70% 50% 50% / 60% 40% 60% 40%;
-  }
-
-  100% {
-    border-radius: 40% 60% 70% 30% / 70% 50% 50% 60%;
-  }
+.bgart {
+  position: absolute;
+  height: 1300px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  top: calc(50%);
+  left: calc(50%);
 }
 
 /*------------------------------------------------------------------------------*/
@@ -266,25 +244,34 @@ li {
 .contact-form-styled {
   background-color: #00000075;
   border: solid thin #ffffff30;
-  width: 100%; /* Take full width of container up to max-width */
-  max-width: 512px; /* Set maximum width */
-  margin: 0 auto; /* Center form horizontally within its container */
-  padding: 20px; /* Add some internal padding if container doesn't */
+  width: 100%;
+  /* Take full width of container up to max-width */
+  max-width: 512px;
+  /* Set maximum width */
+  margin: 0 auto;
+  /* Center form horizontally within its container */
+  padding: 20px;
+  /* Add some internal padding if container doesn't */
   box-sizing: border-box;
 }
 
 /* Form Group for spacing */
 .form-group {
-  margin-bottom: 20px; /* Consistent spacing between groups */
+  margin-bottom: 20px;
+  /* Consistent spacing between groups */
 }
 
 /* Label Styling */
 .contact-form-styled label {
-  display: block; /* Labels on their own line */
-  margin-bottom: 8px; /* Space below label */
-  color: #ffffff; /* White text for labels */
+  display: block;
+  /* Labels on their own line */
+  margin-bottom: 8px;
+  /* Space below label */
+  color: #ffffff;
+  /* White text for labels */
   font-size: 0.9em;
-  font-weight: 500; /* Slightly bolder label */
+  font-weight: 500;
+  /* Slightly bolder label */
 }
 
 /* Required Asterisk Styling */
@@ -298,13 +285,19 @@ li {
 .contact-form-styled input[type="email"],
 .contact-form-styled input[type="tel"] {
   width: 100%;
-  padding: 10px 0; /* Padding top/bottom only */
-  border: none; /* Remove default borders */
-  border-bottom: 1px solid #cccccc; /* Light grey bottom border */
+  padding: 10px 0;
+  /* Padding top/bottom only */
+  border: none;
+  /* Remove default borders */
+  border-bottom: 1px solid #cccccc;
+  /* Light grey bottom border */
   font-size: 1em;
-  font-family: inherit; /* Use container's font */
-  background-color: transparent; /* No background color */
-  color: #ffffff; /* White text color for input */
+  font-family: inherit;
+  /* Use container's font */
+  background-color: transparent;
+  /* No background color */
+  color: #ffffff;
+  /* White text color for input */
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
@@ -313,47 +306,61 @@ li {
 .contact-form-styled input[type="text"]:focus,
 .contact-form-styled input[type="email"]:focus,
 .contact-form-styled input[type="tel"]:focus {
-  outline: none; /* Remove default focus outline */
-  border-bottom-color: #ffffff; /* White bottom border on focus */
+  outline: none;
+  /* Remove default focus outline */
+  border-bottom-color: #ffffff;
+  /* White bottom border on focus */
 }
 
 /* Placeholder Styling */
 .contact-form-styled input::placeholder {
-color: #bbbbbb; /* Lighter white/grey for placeholder */
-opacity: 1; /* Ensure visibility */
+  color: #bbbbbb;
+  /* Lighter white/grey for placeholder */
+  opacity: 1;
+  /* Ensure visibility */
 }
+
 /* Firefox Placeholder Fix */
 .contact-form-styled input::-moz-placeholder {
-color: #bbbbbb;
-opacity: 1;
+  color: #bbbbbb;
+  opacity: 1;
 }
+
 /* Edge Placeholder Fix */
 .contact-form-styled input::-ms-input-placeholder {
-color: #bbbbbb;
+  color: #bbbbbb;
 }
 
 /* Button Styling */
 .contact-form__submit-styled {
-  display: block; /* Full width button */
+  display: block;
+  /* Full width button */
   width: 100%;
-  background-color: transparent; /* Transparent background */
-  color: #ffffff; /* White text */
-  border: 1px solid #ffffff; /* White border */
+  background-color: transparent;
+  /* Transparent background */
+  color: #ffffff;
+  /* White text */
+  border: 1px solid #ffffff;
+  /* White border */
   padding: 12px 20px;
   font-size: 1em;
   font-weight: 500;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  text-transform: uppercase; /* Uppercase text */
+  text-transform: uppercase;
+  /* Uppercase text */
   letter-spacing: 0.5px;
-  margin-top: 25px; /* More space above the button */
+  margin-top: 25px;
+  /* More space above the button */
 }
 
 /* Button Hover Effect */
 .contact-form__submit-styled:hover {
-  background-color: #ffffff25; /* White background on hover */
-  color: #000000; /* Black text on hover */
+  background-color: #ffffff25;
+  /* White background on hover */
+  color: #000000;
+  /* Black text on hover */
 }
 
 /* Ensure inner span doesn't interfere with styles */
