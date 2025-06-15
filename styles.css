@@ -49,6 +49,35 @@ body {
 
 /*------------------------------------------------------------------------------*/
 
+.about p {
+  padding-top: 18px;
+}
+
+.about h2 {
+  padding-top: 30px;
+  font-weight: 300;
+}
+
+.about {
+  max-width: 850px;
+  margin: auto;
+}
+
+.about .sub-heading {
+  font-size: 24px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+.about h1 {
+  margin-bottom: 30px;
+}
+
+.about h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .container {
   height: fit-content;
   width: 100%;
@@ -161,7 +190,7 @@ h4 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 30px;
   max-width: 850px;
 }
