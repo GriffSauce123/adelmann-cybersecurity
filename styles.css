@@ -63,6 +63,10 @@ body {
   margin: auto;
 }
 
+.hero {
+  min-height: 100vh;
+}
+
 .about .sub-heading {
   font-size: 24px;
   padding-top: 40px;
@@ -89,11 +93,10 @@ body {
   z-index: 1;
 }
 
-.hero,
-.cta,
-.contact-section {
+.hero {
   z-index: 10;
 }
+
 
 .contact {
   border: solid thin #ffffff50;
@@ -113,10 +116,6 @@ body {
 
 .contact * {
   margin: 10px;
-}
-
-.hero {
-  min-height: 100vh;
 }
 
 .contact-section h2:hover {
@@ -146,9 +145,16 @@ h4 {
 .subtitle {
   font-size: 40px;
   text-align: center;
+  width: 100%;
+  margin: auto;
   margin-bottom: 2rem;
   font-weight: 650;
+  line-height: 50px;
 
+}
+
+.top {
+  padding-top: 120px !important;
 }
 
 .cta-button {
@@ -217,6 +223,11 @@ li {
   
   .blob, .bgart {
     display: none;
+  }
+
+  .top {
+    padding-top: 0;
+    padding-bottom: 120px;
   }
 
   .contact-section h2 {
