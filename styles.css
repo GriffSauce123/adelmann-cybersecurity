@@ -4,6 +4,7 @@
 
 
 * {
+  scroll-margin-top: 100px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -49,7 +50,6 @@ body {
   object-fit: cover;
   pointer-events: none;
 
-  /* Optional: Make sure it's behind all other content */
 }
 
 .bgart::after {
@@ -113,6 +113,53 @@ body {
   z-index: 10;
 }
 
+.offerings {
+  display: grid;
+  margin: 20px;
+  grid-template-columns: 31% 38% 31%;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.offerings a {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.offerings a:hover {
+  opacity: 0.6;
+}
+
+.offerings>a:nth-child(1) {
+  clip-path: polygon(0 0,
+      calc(100% - 20px) 0,
+      100% 50%,
+      calc(100% - 20px) 100%,
+      0 100%);
+}
+
+.offerings>a:nth-child(2) {
+  clip-path: polygon(0 0,
+      20px 50%,
+      0 100%,
+      calc(100% - 20px) 100%,
+      100% 50%,
+      calc(100% - 20px) 0);
+}
+
+.offerings>a:nth-child(3) {
+  clip-path: polygon(0 0,
+      calc(100%) 0,
+      100% 100%,
+      0 100%,
+      20px 50%);
+}
+
 .scroll-arrow {
   position: fixed;
   bottom: 20px;
@@ -121,22 +168,20 @@ body {
   animation: pulse-down 2s infinite;
   opacity: 0.7;
   transition: opacity 0.2s ease;
-  z-index: 10;
-  /* Keep above background but below nav if needed */
+  z-index: 10000;
   width: 24px;
   height: 24px;
   color: #ffffff;
-  /* Or use currentColor if inherited from text */
+}
+
+.scroll-arrow:hover {
+  cursor: pointer;
 }
 
 .hidden {
   opacity: 0 !important;
   pointer-events: none;
   transition: opacity 0.3s ease;
-}
-
-.scroll-arrow:hover {
-  opacity: 1;
 }
 
 @keyframes pulse-down {
@@ -292,6 +337,20 @@ li {
 
 @media only screen and (max-width: 1200px) {
 
+  .offerings {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 15px;
+  }
+
+  .offerings a {
+    clip-path: none;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+  }
+
   .scroll-arrow {
     bottom: 92px;
   }
@@ -368,103 +427,71 @@ li {
   background-color: #00000075;
   border: solid thin #ffffff30;
   width: 100%;
-  /* Take full width of container up to max-width */
   max-width: 512px;
-  /* Set maximum width */
   margin: 0 auto;
-  /* Center form horizontally within its container */
   padding: 20px;
-  /* Add some internal padding if container doesn't */
   box-sizing: border-box;
 }
 
-/* Form Group for spacing */
 .form-group {
   margin-bottom: 20px;
-  /* Consistent spacing between groups */
 }
 
-/* Label Styling */
 .contact-form-styled label {
   display: block;
-  /* Labels on their own line */
   margin-bottom: 8px;
-  /* Space below label */
   color: #ffffff;
-  /* White text for labels */
   font-size: 0.9em;
   font-weight: 500;
-  /* Slightly bolder label */
 }
 
-/* Required Asterisk Styling */
 .required-asterisk {
   margin-left: 4px;
   font-weight: bold;
 }
 
-/* Input Styling */
 .contact-form-styled input[type="text"],
 .contact-form-styled input[type="email"],
 .contact-form-styled input[type="tel"] {
   width: 100%;
   padding: 10px 0;
-  /* Padding top/bottom only */
   border: none;
-  /* Remove default borders */
   border-bottom: 1px solid #cccccc;
-  /* Light grey bottom border */
   font-size: 1em;
   font-family: inherit;
-  /* Use container's font */
   background-color: transparent;
-  /* No background color */
   color: #ffffff;
-  /* White text color for input */
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
 
-/* Input Focus Styling */
 .contact-form-styled input[type="text"]:focus,
 .contact-form-styled input[type="email"]:focus,
 .contact-form-styled input[type="tel"]:focus {
   outline: none;
-  /* Remove default focus outline */
   border-bottom-color: #ffffff;
-  /* White bottom border on focus */
 }
 
-/* Placeholder Styling */
 .contact-form-styled input::placeholder {
   color: #bbbbbb;
-  /* Lighter white/grey for placeholder */
   opacity: 1;
-  /* Ensure visibility */
 }
 
-/* Firefox Placeholder Fix */
 .contact-form-styled input::-moz-placeholder {
   color: #bbbbbb;
   opacity: 1;
 }
 
-/* Edge Placeholder Fix */
 .contact-form-styled input::-ms-input-placeholder {
   color: #bbbbbb;
 }
 
-/* Button Styling */
 .contact-form__submit-styled {
   display: block;
-  /* Full width button */
   width: 100%;
   background-color: transparent;
-  /* Transparent background */
   color: #ffffff;
-  /* White text */
   border: 1px solid #ffffff;
-  /* White border */
   padding: 12px 20px;
   font-size: 1em;
   font-weight: 500;
@@ -472,21 +499,11 @@ li {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   text-transform: uppercase;
-  /* Uppercase text */
   letter-spacing: 0.5px;
   margin-top: 25px;
-  /* More space above the button */
 }
 
-/* Button Hover Effect */
 .contact-form__submit-styled:hover {
   background-color: #ffffff25;
-  /* White background on hover */
   color: #000000;
-  /* Black text on hover */
-}
-
-/* Ensure inner span doesn't interfere with styles */
-.contact-form__submit-styled span {
-  /* No specific styles needed here unless overriding button text */
 }
