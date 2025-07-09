@@ -1,7 +1,4 @@
-/*------------------------------ Global Styling ---------------------------------*/
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 
 * {
   scroll-margin-top: 100px;
@@ -20,21 +17,16 @@ html {
 
 body {
   background: #00001f;
-  overflow-x: hidden;
 }
-
-
-/* -------------------- FOR THE BG --------------------------  */
 
 .blob {
   position: absolute;
   width: 700px;
   height: 500px;
-  top: calc(50%);
-  left: calc(50%);
+  top: 50%;
+  left: 50%;
   background: #31136D39;
   filter: blur(250px);
-  -webkit-filter: blur(250px);
   z-index: 1;
   transform: translate(-50%, -50%);
 }
@@ -49,7 +41,6 @@ body {
   z-index: 0;
   object-fit: cover;
   pointer-events: none;
-
 }
 
 .bgart::after {
@@ -63,30 +54,13 @@ body {
   z-index: 1;
 }
 
-/*------------------------------------------------------------------------------*/
-
-.about p {
-  padding-top: 18px;
-}
-
-.about h2 {
-  padding-top: 30px;
-  font-weight: 300;
-}
-
 .about {
   max-width: 850px;
   margin: auto;
 }
 
-.hero {
-  min-height: 100vh;
-}
-
-.about .sub-heading {
-  font-size: 24px;
-  padding-top: 40px;
-  padding-bottom: 10px;
+.about p {
+  padding-top: 18px;
 }
 
 .about h1 {
@@ -94,8 +68,20 @@ body {
 }
 
 .about h2 {
+  padding-top: 30px;
+  font-weight: 300;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.about .sub-heading {
+  font-size: 24px;
+  padding: 40px 0 10px 0;
+}
+
+.hero {
+  min-height: 100vh;
+  z-index: 10;
 }
 
 .container {
@@ -104,13 +90,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   position: relative;
   z-index: 1;
-}
-
-.hero {
-  z-index: 10;
+  overflow: hidden;
 }
 
 .offerings {
@@ -124,7 +106,7 @@ body {
 .offerings a {
   background-color: white;
   color: black;
-  padding: 20px;
+  padding: 10px 20px;
   text-align: center;
   position: relative;
   font-weight: 600;
@@ -136,28 +118,15 @@ body {
 }
 
 .offerings>a:nth-child(1) {
-  clip-path: polygon(0 0,
-      calc(100% - 20px) 0,
-      100% 50%,
-      calc(100% - 20px) 100%,
-      0 100%);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
 }
 
 .offerings>a:nth-child(2) {
-  clip-path: polygon(0 0,
-      20px 50%,
-      0 100%,
-      calc(100% - 20px) 100%,
-      100% 50%,
-      calc(100% - 20px) 0);
+  clip-path: polygon(0 0, 20px 50%, 0 100%, calc(100% - 20px) 100%, 100% 50%, calc(100% - 20px) 0);
 }
 
 .offerings>a:nth-child(3) {
-  clip-path: polygon(0 0,
-      calc(100%) 0,
-      100% 100%,
-      0 100%,
-      20px 50%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 20px 50%);
 }
 
 .scroll-arrow {
@@ -249,11 +218,9 @@ h4 {
   font-size: 40px;
   text-align: center;
   width: 100%;
-  margin: auto;
-  margin-bottom: 2rem;
+  margin: auto auto 2rem auto;
   font-weight: 650;
   line-height: 50px;
-
 }
 
 .top {
@@ -263,17 +230,15 @@ h4 {
 .cta-button {
   width: fit-content;
   display: flex;
-  margin: auto;
+  margin: 40px auto 0 auto;
   text-decoration: none;
   background-color: white;
   padding: 10px 20px;
-  margin-top: 40px;
   color: black;
   font-weight: 600;
   transition: all 0.2s ease;
   border: thin solid transparent;
   animation: borderFade 4s infinite;
-
 }
 
 .cta-button:hover,
@@ -287,7 +252,6 @@ h4 {
   position: fixed;
   background: #00000025;
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   width: 100%;
   z-index: 11;
   height: 72px;
@@ -299,17 +263,48 @@ h4 {
   margin: auto;
 }
 
-
 .nav-inner a {
   font-size: 12px;
   text-decoration: none;
   margin: 10px 25px;
-  border-bottom: solid thin #00001f;
+  border-bottom: solid thin transparent;
   transition: 0.1s;
 }
 
 .nav-inner a:hover {
   border-color: white;
+}
+
+.nav-link {
+  border-bottom: solid thin transparent;
+}
+
+.nav-link:hover {
+  border-color: white;
+}
+
+.nav-link.active {
+  border-color: white;
+}
+
+.italic-centered {
+  font-style: italic;
+  text-align: center;
+}
+
+.blur-box {
+  margin: auto;
+  background: #00000025;
+  border: solid thin #ffffff2f;
+  backdrop-filter: blur(20px);
+}
+
+.center {
+  text-align: center;
+}
+
+.padded-box {
+  padding: 20px;
 }
 
 p {
@@ -318,14 +313,12 @@ p {
   max-width: 850px;
 }
 
-
 li {
   font-size: 20px;
   line-height: 40px;
   max-width: 850px;
   list-style-type: disc;
   margin-left: 30px;
-  overflow-x: visible;
 }
 
 .small_cta {
@@ -336,19 +329,13 @@ li {
 }
 
 @media only screen and (max-width: 1200px) {
-
   .offerings {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    gap: 15px;
   }
 
   .offerings a {
     clip-path: none;
-    position: relative;
-    padding: 20px;
-    text-align: center;
   }
 
   .scroll-arrow {
@@ -360,8 +347,7 @@ li {
   }
 
   .top {
-    padding-top: 0;
-    padding-bottom: 120px;
+    padding: 0 0 120px 0;
   }
 
   .contact-section h2 {
@@ -385,7 +371,6 @@ li {
 
   .title {
     font-size: 45px;
-    margin-left: 0px;
   }
 
   .subtitle {
@@ -403,8 +388,7 @@ li {
   }
 
   .nav-inner a {
-    padding: 0;
-    margin: 0px 8px;
+    margin: 0 8px;
   }
 
   .contact {
@@ -421,16 +405,12 @@ li {
   }
 }
 
-
-/* Form General Styling */
 .contact-form-styled {
   background-color: #00000075;
   border: solid thin #ffffff30;
-  width: 100%;
   max-width: 512px;
   margin: 0 auto;
   padding: 20px;
-  box-sizing: border-box;
 }
 
 .form-group {
@@ -440,7 +420,6 @@ li {
 .contact-form-styled label {
   display: block;
   margin-bottom: 8px;
-  color: #ffffff;
   font-size: 0.9em;
   font-weight: 500;
 }
@@ -458,16 +437,13 @@ li {
   border: none;
   border-bottom: 1px solid #cccccc;
   font-size: 1em;
-  font-family: inherit;
   background-color: transparent;
   color: #ffffff;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
 
-.contact-form-styled input[type="text"]:focus,
-.contact-form-styled input[type="email"]:focus,
-.contact-form-styled input[type="tel"]:focus {
+.contact-form-styled input:focus {
   outline: none;
   border-bottom-color: #ffffff;
 }
@@ -475,15 +451,6 @@ li {
 .contact-form-styled input::placeholder {
   color: #bbbbbb;
   opacity: 1;
-}
-
-.contact-form-styled input::-moz-placeholder {
-  color: #bbbbbb;
-  opacity: 1;
-}
-
-.contact-form-styled input::-ms-input-placeholder {
-  color: #bbbbbb;
 }
 
 .contact-form__submit-styled {

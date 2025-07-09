@@ -2,27 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen" />
     <link rel="icon" type="image/png" href="./favicon.jpg?" />
     <title>Adelmann Cybersecurity</title>
 </head>
 
 <body>
     <div class="blob"></div>
-    <img src="./bgimage.webp" class="bgart"></img>
+    <img src="./bgimage.webp" class="bgart" loading="lazy" alt="Background" />
 
     <div class="nav-outer flex">
         <div class="nav-inner">
-            <a href="#" style="border-bottom: solid thin white;">HOME</a>
-            <a href="./threats.html">THREATS</a>
-            <a href="./service.html">SERVICE</a>
-            <a href="./about.html">ABOUT</a>
-            <a href="./contact.html">CONTACT</a>
+            <a href="#" class="nav-link active">HOME</a>
+            <!--<a href="./threats.html" class="nav-link">THREATS</a>
+            <a href="./service.html" class="nav-link">SERVICE</a>-->
+            <a href="./about.html" class="nav-link">ABOUT</a>
+            <a href="./contact.html" class="nav-link">CONTACT</a>
         </div>
     </div>
+
     <svg class="scroll-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6 8L12 14L18 8" stroke="currentColor" stroke-width="2" stroke-linecap="butt"
             stroke-linejoin="miter" />
@@ -31,38 +32,36 @@
     <div class="container hero">
         <div id="hero">
             <h1 class="title">Adelmann Cybersecurity</h1>
-            <h2 class="subtitle" style="line-height: auto; margin: auto; text-align: center; font-style: italic;">
-                Bespoke digital protection
-            </h2>
-            <a href="./contact.html" class="cta-button">Schedule A Private Consultation</a>
+            <h2 class="subtitle italic-centered">Bespoke digital protection</h2>
+
             <div class="container">
                 <div class="inner">
-                    <br>
-                    <br>
-                    <br>
-                    <p
-                        style="margin: auto; border: solid thin #ffffff2f; padding: 20px; background: #00000025; backdrop-filter: blur(20px);">
-                        We
-                        provide personalized,
-                        intelligence-grade
-                        security to families and
-                        individuals
-                        who value true sovereignty over their legacy and data.</p>
+                    <div class="blur-box center padded-box">
+                        <p>
+                            We provide personalized, intelligence-grade security to families and individuals who value
+                            true sovereignty over their legacy and data.
+                        </p>
+                    </div>
                 </div>
             </div>
+
+            <a href="./contact.html" class="cta-button">Schedule A Private Consultation</a>
+
+
         </div>
     </div>
+
     <div class="container m20">
-        <div style="margin: auto; border: solid thin #ffffff2f;  background: #00000025; backdrop-filter: blur(20px);">
-            <h2 style="padding-left: 20px; padding-top: 20px;">What's In A Detail?</h2><br>
-            <p style="padding: 20px; font-size: 16px;">High-net-worth families are easily one of the most underprotected
-                yet highly exposed groups in the digital age. They often live in a hybrid public-private world. Their
-                financial power can create a false sense of protection. With legal structures, wealth managers, and
-                estate planning professionals in place, families often believe their exposure has been “handled”.
-                However, wealth doesn’t necessarily shield them from digital threats. In fact, it makes them more
-                interesting to the wrong eyes. High-net-worth families can no longer rely on traditional privacy
-                assumptions. Their digital presence is extensive, nuanced, and vulnerable in ways that they do not fully
-                monitor or control.
+        <div class="blur-box padded-box">
+            <h2>What's In A Detail?</h2>
+            <p>
+                High-net-worth families are easily one of the most underprotected yet highly exposed groups in the
+                digital age. They often live in a hybrid public-private world. Their financial power can create a false
+                sense of protection. With legal structures, wealth managers, and estate planning professionals in place,
+                families often believe their exposure has been “handled”. However, wealth doesn’t necessarily shield
+                them from digital threats. In fact, it makes them more interesting to the wrong eyes. High-net-worth
+                families can no longer rely on traditional privacy assumptions. Their digital presence is extensive,
+                nuanced, and vulnerable in ways that they do not fully monitor or control.
                 <br><br>
                 Individually, each piece of publicly accessible information may appear trivial or harmless. A property
                 record here, a social media post there, or a simple corporate filing may seem not to expose much on its
@@ -73,18 +72,12 @@
                 their family. It’s about what can be inferred and predicted by anyone with intent.
                 <br><br>
                 So, what’s in a detail? For our clients, the margin between safe and exposed.
-
             </p>
         </div>
     </div>
+
     <a href="./contact.html" class="cta-button">Schedule A Private Consultation</a>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <script src="./script.js"></script>
 </body>
 
